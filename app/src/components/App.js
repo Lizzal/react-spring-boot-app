@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import backend from '../api/backend';
+// import backend from '../api/backend';
 
 export default class App extends Component {
   state = {
