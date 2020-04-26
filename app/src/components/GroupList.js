@@ -53,7 +53,7 @@ export default class GroupLists extends Component {
         <div className="">
           <AppNavbar />
           <Container fluid>
-            <div class="d-flex justify-content-center">
+            <div className="d-flex justify-content-center">
               <Spinner color="primary" style={{ width: '3rem', height: '3rem' }}>
                 "Loading..."
               </Spinner>
@@ -108,7 +108,7 @@ export default class GroupLists extends Component {
               Add Group
             </Button>
           </div>
-          <h3>My Events</h3>
+          <h3>My Groups</h3>
           <Table className="mt-4">
             <thead>
               <tr>
