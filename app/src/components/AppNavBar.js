@@ -38,10 +38,15 @@ export default class AppNavBar extends Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="https://twitter.com/_jnschbrt">@jnschbrt</NavLink>
+              <NavLink href="https://twitter.com/_jnschbrt" target="_blank">
+                @jnschbrt
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/oktadeveloper/okta-spring-boot-react-crud-example">
+              <NavLink
+                href="https://github.com/Lizzal/react-spring-boot-app"
+                target="_blank"
+              >
                 GitHub
               </NavLink>
             </NavItem>
