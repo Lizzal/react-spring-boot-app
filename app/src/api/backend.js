@@ -1,5 +1,31 @@
-import Axios from 'axios';
+import axios from 'axios';
 
-export default Axios.create({
-  baseURL: 'http://localhost:8080/api',
+const apiClient = axios.create({
+  baseURL: '/api',
+  headers: {},
 });
+
+export default {
+  // GETTERS
+  getGroups() {
+    return apiClient.get('/groups');
+  },
+  getGroup(id) {
+    return apiClient.get(`/group/${id}`);
+  },
+
+  // CREATERS
+  createGroup(group) {
+    return apiClient.post('/group', JSON.stringify(group));
+  },
+
+  // UPDATERS
+  updateGroup(id, group) {
+    return apiClient.put(`/group/${id}`, JSON.stringify(group));
+  },
+
+  // DELETERS
+  deleteGroup(id) {
+    return apiClient.delete(`/group/${id}`);
+  },
+};
