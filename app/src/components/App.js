@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Axios from 'axios';
 // import backend from '../api/backend';
 
 export default class App extends Component {
@@ -8,15 +9,13 @@ export default class App extends Component {
   };
 
   async fetchData() {
-    await fetch('/api/groups')
+    await Axios.get('/api/groups')
       .then((response) => {
-        this.setState({ groups: response.json, isLoading: false });
+        this.setState({ groups: response.data, isLoading: false });
       })
       .then((error) => {
-        console.log(error);
+        console.log('There was an error fetching data from the backend: ' + error);
       });
-
-    //this.setState({ groups: body, isLoading: false });
   }
   componentDidMount() {
     this.fetchData();
